@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:test_flutter_course/module/sebha/sebha_screen.dart';
 
-import 'Core/theme/app_colors.dart';
-import 'Core/constants/image.dart';
-import 'widget/nav.dart';
+import '../../Core/theme/app_colors.dart';
+import '../../Core/constants/image.dart';
+import '../../widget/nav.dart';
 
 class OnboardingScreen extends StatefulWidget {
   static const String routeName = "onboarding";

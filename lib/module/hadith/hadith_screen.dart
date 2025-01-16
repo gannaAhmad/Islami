@@ -44,7 +44,6 @@ class _HadithScreenState extends State<HadithScreen> {
                     itemBuilder: (context, index, realIndex) {
                       final hadithContent = allHadiths[index];
                       final title = hadithContent[0];
-
                       return Container(
                         width: 320,
                         decoration: BoxDecoration(

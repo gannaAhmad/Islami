@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter_course/widget/bottom_bar_style.dart';
-import 'package:test_flutter_course/quran_screen.dart';
 import 'package:test_flutter_course/module/Quran/quran_view.dart';
 import 'package:test_flutter_course/module/radio/radio_screen.dart';
 import 'package:test_flutter_course/module/sebha/sebha_screen.dart';

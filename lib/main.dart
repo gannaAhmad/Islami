@@ -4,7 +4,7 @@ import 'package:test_flutter_course/module/Quran/quran_view.dart';
 import 'package:test_flutter_course/module/sebha/sebha_screen.dart';
 import 'package:test_flutter_course/splash/splash_screen.dart';
 import 'widget/nav.dart';
-import 'onboarding_screen.dart';
+import 'module/onboarding/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:test_flutter_course/Core/constants/image.dart';
 
 import '../module/sebha/sebha_screen.dart';
-import '../onboarding_screen.dart';
+import '../module/onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static String routeName = "/";
