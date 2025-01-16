@@ -24,6 +24,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void initState() {
     super.initState();
     controller = PageController();
+    firstPage = true;
   }
 
   @override
@@ -80,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         );
                       },
                       child: const Text(
-                        "Back",
+                        "back",
                         style: TextStyle(
                           color: AppColors.grayColor,
                           fontSize: 20,
@@ -88,7 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                     )
-                  : const SizedBox.shrink(),
+                  : const Text(""),
 
               SmoothPageIndicator(
                 controller: controller,

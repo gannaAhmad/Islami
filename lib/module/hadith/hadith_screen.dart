@@ -100,6 +100,7 @@ class _HadithScreenState extends State<HadithScreen> {
                                         itemCount: hadithContent.length - 1,
                                         itemBuilder: (context, i) => Text(
                                           hadithContent[i + 1],
+                                          textAlign: TextAlign.center,
                                           style: const TextStyle(
                                             color: AppColors.blackColor,
                                             fontSize: 18,
