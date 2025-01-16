@@ -1,0 +1,1 @@
+to fit image at any resolution you should cal mediaQuery.size
