@@ -7,25 +7,24 @@ import 'package:test_flutter_course/splash/splash_screen.dart';
 import 'widget/nav.dart';
 import 'module/onboarding/onboarding_screen.dart';
 
-void main() async {
+int? onboardingState;
+
+Future<void>main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  bool isOnboardingDisplayed = await _checkOnboardingStatus();
-
-  runApp(MyApp(isOnboardingDisplayed));
+  SharedPreferences pref = await SharedPreferences.getInstance();
+  onboardingState = await pref.getInt('onboardingState');
+  await pref.setInt('onboardingState', 1);
+  runApp(const MyApp());
 }
 
 
-
 class MyApp extends StatelessWidget {
-  final bool isOnboardingDisplayed;
-
-  const MyApp(this.isOnboardingDisplayed, {super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: isOnboardingDisplayed ? QuranView.routeName : OnboardingScreen.routeName,
+      initialRoute: (onboardingState == 1 ? QuranView.routeName : OnboardingScreen.routeName),
       routes: {
         SplashScreen.routeName: (context) => const SplashScreen(),
         OnboardingScreen.routeName: (context) => const OnboardingScreen(),
@@ -37,8 +36,4 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
-}
-Future<bool> _checkOnboardingStatus() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getBool('isOnboardingSeen') ?? false;
 }

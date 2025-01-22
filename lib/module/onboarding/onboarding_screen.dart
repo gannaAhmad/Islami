@@ -187,7 +187,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           curve: Curves.easeIn,
                         );
                       } else {
-                        await _setOnboardingSeen();
                         Navigator.pushNamedAndRemoveUntil(
                           context,
                           Navigation.routeName,
@@ -213,8 +212,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  Future<void> _setOnboardingSeen() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isOnboardingDisplayed', true);
-  }
+  // Future<void> _setOnboardingSeen() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   await prefs.setBool('isOnboardingDisplayed', true);
+  // }
 }
